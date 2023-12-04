@@ -1,0 +1,57 @@
+{
+  "rbase": {
+    "scope": "typescriptreact,tsx",
+    "prefix": "rbase",
+    "body": [
+      "// Import react | react-dom -> external lib -> component -> local (alphabet sort) -> @types",
+      "import React, { useState, useEffect } from 'react';",
+      "",
+      "// +++ library modules +++",
+      "// +++ project modules +++",
+      "// +++ local modules +++",
+      "// +++ type modules +++",
+      "interface $1Props {",
+      "  id: string;",
+      "}",
+      "",
+      "const $1: React.FC<$1Props> = ({",
+      "  id,",
+      "  children,",
+      "}: React.PropsWithChildren<$1Props>) => {",
+      "  // State",
+      "  const [state, setState] = useState<string>('initialState');",
+      "",
+      "  // Effects",
+      "  useEffect(() => {",
+      "    // Code to run on component mount and unmount",
+      "    setState('newState');",
+      "    return () => {",
+      "      // Cleanup code",
+      "    };",
+      "  }, []);",
+      "",
+      "  // Handlers",
+      "",
+      "  // Render",
+      "  return (",
+      "    <div>",
+      "      {id}",
+      "      {state}",
+      "      {children}",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default $1;"
+    ],
+    "description": "New React Single file"
+  },
+  // Write me a code snippet for a React component that uses hooks with typescript props and state
+
+  "idp": {
+    "scope": "typescript,tsx",
+    "prefix": "idp",
+    "body": ["import $1 from './$1';", "export default $1;"],
+    "description": "Export default local component"
+  }
+}
