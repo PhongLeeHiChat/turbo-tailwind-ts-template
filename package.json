@@ -17,10 +17,10 @@
     "build:all": "turbo build --filter='*'"
   },
   "devDependencies": {
+    "@hichat/tsconfig": "workspace:packages/tsconfig",
     "eslint": "^8.48.0",
-    "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.3",
-    "tsconfig": "*",
+    "prettier": "^3.0.3",
     "turbo": "latest"
   },
   "packageManager": "bun@1.0.15",
