@@ -1,13 +1,20 @@
 {
   "private": true,
   "scripts": {
+    ">check================================================<": "",
+    "type-check": "tsc --noEmit",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    ">clean================================================<": "",
+    "clean-all": "turbo clean && rm -rf node_modules yarn.lock dist",
+    "clear-dist": "turbo clean && rm -rf dist",
+    ">start================================================<": "",
+    "dev": "turbo dev",
+    "start": "turbo start",
+    ">build================================================<": "",
     "build:apps": "turbo build --filter='./apps/*'",
     "build:packages": "turbo build --filter='./packages/*'",
-    "build:all": "turbo build --filter='*'",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "clean": "turbo clean",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "build:all": "turbo build --filter='*'"
   },
   "devDependencies": {
     "eslint": "^8.48.0",
