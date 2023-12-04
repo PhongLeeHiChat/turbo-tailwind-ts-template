@@ -21,12 +21,12 @@
   },
   "devDependencies": {
     "@hichat/tsconfig": "workspace:packages/tsconfig",
+    "@hichat/tailwind-config": "workspace:packages/tailwind-config",
     "@types/react": "^18.2.5",
     "autoprefixer": "^10.4.13",
     "eslint-config-custom": "*",
     "postcss": "^8.4.20",
     "react": "^18.2.0",
-    "tailwind-config": "*",
     "tailwindcss": "^3.2.4",
     "tsup": "^6.0.1",
     "typescript": "^5.2.2"
