@@ -5,7 +5,9 @@ import classNames from 'classnames'
 
 import BaseIcon from '@components/BaseIcon'
 import Ripple from '@components/Ripple'
+
 import { isFunction, isNull, tuple } from '@shared/utils'
+import mergeRefs from '@shared/utils/dom'
 
 import './_Button.scss'
 
@@ -48,7 +50,7 @@ const BaseButton = React.forwardRef<HTMLButtonElement, BaseButtonProps>((props, 
   // Refs
   const internalRef = React.createRef<HTMLButtonElement>()
 
-  const buttonRef = ref || internalRef
+  const buttonRef = mergeRefs(ref, internalRef)
 
   // States
   const buttonSize = useMemo(() => props.size, [props.size])
