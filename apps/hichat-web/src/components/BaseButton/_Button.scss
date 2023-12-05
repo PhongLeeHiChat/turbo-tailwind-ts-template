@@ -1,0 +1,224 @@
+.hi-button {
+  @apply m-0 rounded border border-solid border-primary bg-primary px-4 py-2 text-base text-white transition duration-200 ease-in-out;
+  @apply relative inline-flex cursor-pointer select-none items-center overflow-hidden text-center align-bottom;
+}
+
+.hi-button:not(:disabled):hover {
+  @apply border-primary-dark bg-primary-dark text-white;
+}
+
+.hi-button:not(:disabled):active {
+  @apply border-primary-darker bg-primary-darker text-white;
+}
+
+.hi-button.is-outlined {
+  @apply border border-solid bg-transparent text-primary;
+}
+.hi-button.is-outlined:not(:disabled):hover {
+  @apply border border-solid  bg-blue-600/5 text-primary;
+}
+.hi-button.is-outlined:not(:disabled):active {
+  @apply border border-solid  bg-blue-600/20 text-primary;
+}
+.hi-button.is-outlined.is-plain {
+  @apply border-muted text-muted;
+}
+.hi-button.is-outlined.is-plain:not(:disabled):hover {
+  @apply bg-light text-muted;
+}
+.hi-button.is-outlined.is-plain:not(:disabled):active {
+  @apply bg-slate-200 text-muted;
+}
+.hi-button:not(:disabled):focus {
+  @apply outline-none outline-0 outline-offset-0;
+  &:not(.is-plain) {
+    @apply ring-2 ring-primary ring-opacity-5 ring-offset-2;
+  }
+}
+
+.hi-button.is-text {
+  @apply border-transparent bg-transparent text-primary;
+}
+.hi-button.is-text:not(:disabled):hover {
+  @apply border-transparent bg-blue-600/5  text-primary;
+}
+.hi-button.is-text:not(:disabled):active {
+  @apply border-transparent bg-blue-600/20 text-primary;
+}
+.hi-button.is-text.is-plain {
+  @apply text-muted;
+}
+.hi-button.is-text.is-plain:not(:disabled):hover {
+  @apply bg-light text-muted;
+}
+.hi-button.is-text.is-plain:not(:disabled):active {
+  @apply bg-slate-200 text-muted;
+}
+
+.hi-button .hi-button__label {
+  @apply duration-200;
+}
+
+.hi-button.is-round {
+  @apply rounded-[2rem];
+}
+
+.hi-button.hi-button--icon-only {
+  @apply h-12 w-12;
+}
+
+// Button Size
+
+.hi-button.hi-button--small {
+  @apply px-3.5 py-1.5 text-sm;
+}
+.hi-button.hi-button--small .hi-icon {
+  @apply text-sm;
+}
+.hi-button.hi-button--large {
+  @apply px-5 py-2 text-xl;
+}
+.hi-button.hi-button--large .hi-icon {
+  @apply text-xl;
+}
+
+// Button Variants
+// Secondary
+.hi-button.hi-button--secondary {
+  @apply border border-solid border-secondary bg-secondary text-white;
+}
+.hi-button.hi-button--secondary:not(:disabled):hover {
+  @apply border-secondary-dark bg-secondary-dark text-white;
+}
+.hi-button.hi-button--secondary:not(:disabled):focus {
+  @apply outline-none outline-0 outline-offset-0;
+  &:not(.is-plain) {
+    @apply ring-2 ring-secondary ring-opacity-5 ring-offset-2;
+  }
+}
+.hi-button.hi-button--secondary:not(:disabled):active {
+  @apply border-secondary-darker bg-secondary-darker text-white;
+}
+.hi-button.hi-button--secondary.is-outlined {
+  @apply border border-solid bg-transparent text-secondary;
+}
+.hi-button.hi-button--secondary.is-outlined:not(:disabled):hover {
+  @apply border border-solid bg-blue-600/5 text-secondary;
+}
+.hi-button.hi-button--secondary.is-outlined:not(:disabled):active {
+  @apply border border-solid bg-blue-600/20 text-secondary;
+}
+.hi-button.hi-button--secondary.is-text {
+  @apply border-transparent bg-transparent text-secondary;
+}
+.hi-button.hi-button--secondary.is-text:not(:disabled):hover {
+  @apply border-transparent bg-blue-600/5 text-secondary;
+}
+.hi-button.hi-button--secondary.is-text:not(:disabled):active {
+  @apply border-transparent bg-blue-600/20 text-secondary;
+}
+
+// Success
+.hi-button.hi-button--success {
+  @apply border border-solid border-success bg-success text-white;
+}
+.hi-button.hi-button--success:not(:disabled):hover {
+  @apply border-success-dark bg-success-dark text-white;
+}
+.hi-button.hi-button--success:not(:disabled):active {
+  @apply border-success-darker bg-success-darker text-white;
+}
+.hi-button.hi-button--success:not(:disabled):focus {
+  @apply outline-none outline-0 outline-offset-0;
+  &:not(.is-plain) {
+    @apply ring-2 ring-success ring-opacity-5 ring-offset-2;
+  }
+}
+.hi-button.hi-button--success.is-outlined {
+  @apply border border-solid bg-transparent text-success;
+}
+.hi-button.hi-button--success.is-outlined:not(:disabled):hover {
+  @apply border border-solid bg-blue-600/5 text-success;
+}
+.hi-button.hi-button--success.is-outlined:not(:disabled):active {
+  @apply border border-solid bg-blue-600/20 text-success;
+}
+.hi-button.hi-button--success.is-text {
+  @apply border-transparent bg-transparent text-success;
+}
+.hi-button.hi-button--success.is-text:not(:disabled):hover {
+  @apply border-transparent bg-blue-600/5 text-success;
+}
+.hi-button.hi-button--success.is-text:not(:disabled):active {
+  @apply border-transparent bg-blue-600/20 text-success;
+}
+
+// Warning
+.hi-button.hi-button--warning {
+  @apply border border-solid border-warning bg-warning text-typography;
+}
+.hi-button.hi-button--warning:not(:disabled):hover {
+  @apply border-warning-dark bg-warning-dark text-typography;
+}
+.hi-button.hi-button--warning:not(:disabled):focus {
+  @apply outline-none outline-0 outline-offset-0;
+  &:not(.is-plain) {
+    @apply ring-2 ring-warning ring-opacity-5 ring-offset-2;
+  }
+}
+.hi-button.hi-button--warning:not(:disabled):active {
+  @apply border-warning-darker bg-warning-darker text-typography;
+}
+.hi-button.hi-button--warning.is-outlined {
+  @apply border border-solid bg-transparent text-warning;
+}
+.hi-button.hi-button--warning.is-outlined:not(:disabled):hover {
+  @apply border border-solid bg-blue-600/5 text-warning;
+}
+.hi-button.hi-button--warning.is-outlined:not(:disabled):active {
+  @apply border border-solid bg-blue-600/20 text-warning;
+}
+.hi-button.hi-button--warning.is-text {
+  @apply border-transparent bg-transparent text-warning;
+}
+.hi-button.hi-button--warning.is-text:not(:disabled):hover {
+  @apply border-transparent bg-blue-600/5 text-warning;
+}
+.hi-button.hi-button--warning.is-text:not(:disabled):active {
+  @apply border-transparent bg-blue-600/20 text-warning;
+}
+
+// Error
+.hi-button.hi-button--error {
+  @apply border border-solid border-error bg-error text-white;
+}
+.hi-button.hi-button--error:not(:disabled):hover {
+  @apply border-error-dark bg-error-dark text-white;
+}
+.hi-button.hi-button--error:not(:disabled):focus {
+  @apply outline-none outline-0 outline-offset-0;
+  &:not(.is-plain) {
+    @apply ring-2 ring-error ring-opacity-5 ring-offset-2;
+  }
+}
+.hi-button.hi-button--error:not(:disabled):active {
+  @apply border-error-darker bg-error-darker text-white;
+}
+.hi-button.hi-button--error.is-outlined {
+  @apply border border-solid bg-transparent text-error;
+}
+.hi-button.hi-button--error.is-outlined:not(:disabled):hover {
+  @apply border border-solid bg-blue-600/5 text-error;
+}
+.hi-button.hi-button--error.is-outlined:not(:disabled):active {
+  @apply border border-solid bg-blue-600/20 text-error;
+}
+.hi-button.hi-button--error.is-text {
+  @apply border-transparent bg-transparent text-error;
+}
+.hi-button.hi-button--error.is-text:not(:disabled):hover {
+  @apply border-transparent bg-blue-600/5 text-error;
+}
+.hi-button.hi-button--error.is-text:not(:disabled):active {
+  @apply border-transparent bg-blue-600/20 text-error;
+}

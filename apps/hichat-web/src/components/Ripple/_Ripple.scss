@@ -1,0 +1,13 @@
+.hi-ink {
+  @apply absolute block scale-0 rounded-full bg-white bg-opacity-50;
+}
+
+.hi-ink.is-active {
+  @apply animate-[ripple_400ms_linear];
+}
+
+@keyframes ripple {
+  100% {
+    @apply scale-150 opacity-0;
+  }
+}

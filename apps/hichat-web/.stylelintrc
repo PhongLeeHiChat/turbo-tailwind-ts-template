@@ -1,0 +1,38 @@
+{
+    "plugins": [],
+    "overrides": [
+        {
+            "files": ["*.scss", "**/*.scss", "*.css", "**/*.css"],
+            "customSyntax": "postcss-scss"
+        }
+    ],
+    "ignoreFiles": "tests/**/*.{scss,css}",
+    "rules": {
+        "at-rule-empty-line-before": [
+            "always",
+            {
+                "except": ["first-nested"],
+                "ignoreAtRules": ["else"]
+            }
+        ],
+        "block-opening-brace-space-before": "always",
+        "block-closing-brace-newline-after": [
+            "always",
+            {
+                "ignoreAtRules": ["if", "else"]
+            }
+        ],
+        "at-rule-name-space-after": "always",
+        "rule-empty-line-before": [
+            "always",
+            {
+                "except": ["first-nested"]
+            }
+        ],
+        "scss/at-else-closing-brace-newline-after": "always-last-in-chain",
+        "scss/at-else-closing-brace-space-after": "always-intermediate",
+        "scss/at-if-closing-brace-newline-after": "always-last-in-chain",
+        "scss/at-if-closing-brace-space-after": "always-intermediate",
+        "scss/dollar-variable-pattern": "^v-([a-z][a-z]*)(-[a-z0-9]+)*$"
+    }
+}
