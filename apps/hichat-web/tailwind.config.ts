@@ -3,8 +3,9 @@
 import type { Config } from "tailwindcss";
 import sharedConfig from "@hichat/tailwind-config/tailwind.config.ts";
 
-const config: Pick<Config, "presets" | "theme"> = {
+const config: Pick<Config, "presets" | "theme" | "darkMode"> = {
   presets: [sharedConfig],
+  darkMode: ["class"],
   theme: {
     container: {
       center: true,

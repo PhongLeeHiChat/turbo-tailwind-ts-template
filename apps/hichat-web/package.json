@@ -3,10 +3,19 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    ">check================================================<": "",
+    "typecheck": "tsc --noEmit",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    ">dev================================================<": "",
     "dev": "next dev",
-    "build": "next build",
+    "preview": "next build && next start",
     "start": "next start",
-    "lint": "next lint"
+    ">build================================================<": "",
+    "build": "next build",
+    ">format================================================<": "",
+    "format:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
+    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache"
   },
   "dependencies": {
     "next": "^14.0.3",

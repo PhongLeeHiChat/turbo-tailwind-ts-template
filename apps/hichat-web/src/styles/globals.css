@@ -15,73 +15,72 @@
     @apply text-lg;
   }
 
-  * {
-    @apply box-border m-0 p-0 scroll-smooth;
-
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  
-    text-rendering: optimizeLegibility;
-  }
-
-  body {
-    font-family: var(--font-family);
-    color: var(--color-text);
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-base);
-  
-    font-style: normal;
-    font-weight: 400;
-  }
-  
   :root {
-    --font-family: Manrope, sans-serif;
-    --font-size: 1.125rem;
-    --line-height: 1.75;
-    
+    --font-family-base: Manrope, sans-serif;
+    --font-size-base: 1.125rem;
+    --line-height-base: 1.75;
+
     --color-white: 0, 0%, 100%;
     --color-black: 0, 0%, 0%;
     --color-light: 0, 0%, 91%;
-  
+
     --color-primary: 210, 100%, 63%;
     --color-primary-dark: 210, 100%, 58%;
     --color-primary-darker: 210, 100%, 48%;
 
-  
     --color-secondary: 220, 4%, 58%;
     --color-secondary-dark: 220, 4%, 53%;
     --color-secondary-darker: 220, 4%, 43%;
 
-  
     --color-success: 100, 54%, 49%;
-    --color-success-dark:100, 54%, 44%;
+    --color-success-dark: 100, 54%, 44%;
     --color-success-darker: 100, 54%, 34%;
-  
-  
+
     --color-warning: 36, 77%, 57%;
     --color-waring-dark: 36, 77%, 52%;
     --color-warning-darker: 36, 77%, 42%;
-  
 
     --color-error: 0, 87%, 69%;
     --color-error-dark: 0, 87%, 64%;
     --color-error-darker: 0, 87%, 54%;
 
-  
     --color-text: 0, 0%, 20%;
     --color-text-muted: 0, 0%, 52%;
     --color-fill-blank: 0, 0%, 96%;
-  
+
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
   }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground-rgb: 255, 255, 255;
+      --background-start-rgb: 0, 0, 0;
+      --background-end-rgb: 0, 0, 0;
+    }
+  }
+
+  * {
+    @apply m-0 box-border scroll-smooth p-0;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
+      rgb(var(--background-start-rgb));
+
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+
+    font-style: normal;
+    font-weight: 400;
+  }
 }
-
-
-
-
-
-
-

@@ -1,40 +1,33 @@
-"use client";
-// Import react | react-dom -> external lib -> component -> local (alphabet sort) -> @types
-import React, { useEffect, useMemo } from 'react';
+'use client'
 
-// +++ library modules +++
-import classNames from 'classnames';
+import React, { useEffect, useMemo } from 'react'
+import classNames from 'classnames'
 
-// +++ project modules +++
-import Ripple from '@components/Ripple';
-import BaseIcon from '@components/BaseIcon';
+import BaseIcon from '@components/BaseIcon'
+import Ripple from '@components/Ripple'
+import { isFunction, isNull, tuple } from '@shared/utils'
 
-import { tuple, isFunction, isNull } from '@shared/utils';
-
-// +++ local modules +++
 import './_Button.scss'
 
-// +++ type modules +++
-
-const ButtonHTMLTypes = tuple('submit', 'button', 'reset');
-export type ButtonHTMLType = (typeof ButtonHTMLTypes)[number];
+const ButtonHTMLTypes = tuple('submit', 'button', 'reset')
+export type ButtonHTMLType = (typeof ButtonHTMLTypes)[number]
 export interface BaseButtonProps {
-  autofocus?: boolean;
-  className?: string;
-  disabled?: boolean;
-  icon?: string;
-  iconPosition?: 'left' | 'right';
-  loading?: boolean;
-  nativeType?: ButtonHTMLType;
-  outlined?: boolean;
-  plain?: boolean;
-  round?: boolean;
-  size?: '' | 'large' | 'small';
-  style?: React.CSSProperties;
-  text?: boolean;
-  type?: 'success' | 'warning' | 'danger' | 'info' | 'primary' | 'secondary' | '';
-  onClick?: React.MouseEventHandler<HTMLElement>;
-  children?: React.ReactNode;
+  autofocus?: boolean
+  className?: string
+  disabled?: boolean
+  icon?: string
+  iconPosition?: 'left' | 'right'
+  loading?: boolean
+  nativeType?: ButtonHTMLType
+  outlined?: boolean
+  plain?: boolean
+  round?: boolean
+  size?: '' | 'large' | 'small'
+  style?: React.CSSProperties
+  text?: boolean
+  type?: 'success' | 'warning' | 'danger' | 'info' | 'primary' | 'secondary' | ''
+  onClick?: React.MouseEventHandler<HTMLElement>
+  children?: React.ReactNode
 }
 
 const BaseButton = React.forwardRef<HTMLButtonElement, BaseButtonProps>((props, ref) => {
@@ -50,16 +43,16 @@ const BaseButton = React.forwardRef<HTMLButtonElement, BaseButtonProps>((props, 
     round,
     style,
     text,
-  } = props;
+  } = props
 
   // Refs
-  const internalRef = React.createRef<HTMLButtonElement>();
+  const internalRef = React.createRef<HTMLButtonElement>()
 
-  const buttonRef = ref || internalRef;
+  const buttonRef = ref || internalRef
 
   // States
-  const buttonSize = useMemo(() => props.size, [props.size]);
-  const buttonType = useMemo(() => props.type, [props.type]);
+  const buttonSize = useMemo(() => props.size, [props.size])
+  const buttonType = useMemo(() => props.type, [props.type])
 
   const className = classNames(
     'hi-button',
@@ -73,29 +66,29 @@ const BaseButton = React.forwardRef<HTMLButtonElement, BaseButtonProps>((props, 
       'is-round': round,
       'is-text': text,
     },
-    props.className,
-  );
+    props.className
+  )
 
   // Effects
   useEffect(() => {
-    return () => {};
-  }, []);
+    return () => {}
+  }, [])
 
   // Handlers
 
   const handleClick = (
-    event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>,
+    event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>
   ) => {
     if (isFunction(props?.onClick)) {
-      props.onClick(event);
+      props.onClick(event)
     }
-  };
+  }
 
   // Renders
 
   const kids: JSX.Element | null = props.children ? (
-    <span className="hi-button__label">{props.children}</span>
-  ) : null;
+    <span className='hi-button__label'>{props.children}</span>
+  ) : null
 
   const iconNode: JSX.Element | null =
     props.icon && !loading ? (
@@ -106,11 +99,11 @@ const BaseButton = React.forwardRef<HTMLButtonElement, BaseButtonProps>((props, 
       />
     ) : loading ? (
       <BaseIcon
-        icon="pi pi-spin pi-spinner"
+        icon='pi pi-spin pi-spinner'
         className={isNull(kids) ? 'leading-8' : `hi-icon--${iconPosition}`}
         size={buttonSize}
       />
-    ) : null;
+    ) : null
 
   return (
     <button
@@ -129,14 +122,14 @@ const BaseButton = React.forwardRef<HTMLButtonElement, BaseButtonProps>((props, 
 
       <Ripple />
     </button>
-  );
-});
+  )
+})
 
 // Defaults
-BaseButton.displayName = 'BaseButton';
+BaseButton.displayName = 'BaseButton'
 BaseButton.defaultProps = {
   iconPosition: 'left',
   nativeType: 'button',
-};
+}
 
-export default BaseButton;
+export default BaseButton
