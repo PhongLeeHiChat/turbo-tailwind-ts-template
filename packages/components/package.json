@@ -11,6 +11,9 @@
   },
   "license": "MIT",
   "scripts": {
+    ">clean================================================<": "",
+    "clean-all": "turbo clean && rm -rf node_modules bun.lockb dist",
+    "clear-dist": "turbo clean && rm -rf dist",
     "build": "tsup",
     "lint": "eslint src/",
     "dev": "tsup --watch",
@@ -20,7 +23,7 @@
     "react": "^18.2.0"
   },
   "devDependencies": {
-    "@hichat/eslint-config-custom": "workspace:packages/eslint-config-custom",
+    "@hichat/eslint-config": "workspace:packages/eslint-config",
     "@hichat/tailwind-config": "workspace:packages/tailwind-config",
     "@hichat/tsconfig": "workspace:packages/tsconfig",
     "@types/react": "^18.2.5",

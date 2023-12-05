@@ -15,7 +15,7 @@
 
   "files.insertFinalNewline": true,
 
-  "cSpell.words": ["Hi Chat", "hi-chat", "hichat"],
+  "cSpell.words": ["Hi Chat", "hi-chat", "hichat", "lockb"],
   "typescript.tsdk": "node_modules/typescript/lib",
 
   "eslint.probe": ["typescript", "typescriptreact", "html"],

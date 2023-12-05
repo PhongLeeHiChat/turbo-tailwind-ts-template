@@ -1,5 +1,5 @@
 {
-  "name": "@hichat/eslint-config-custom",
+  "name": "@hichat/eslint-config",
   "license": "MIT",
   "version": "0.0.0",
   "private": true,

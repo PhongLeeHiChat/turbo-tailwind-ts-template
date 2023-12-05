@@ -6,7 +6,7 @@
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     ">clean================================================<": "",
-    "clean-all": "turbo clean && rm -rf node_modules yarn.lock dist",
+    "clean-all": "turbo clean && rm -rf node_modules bun.lockb dist",
     "clear-dist": "turbo clean && rm -rf dist",
     ">start================================================<": "",
     "dev": "turbo dev",
